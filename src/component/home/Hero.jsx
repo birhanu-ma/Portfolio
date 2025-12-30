@@ -2,7 +2,7 @@ import React from "react";
 import { FaGithub, FaLinkedinIn, FaEnvelope } from "react-icons/fa";
 import { SiUpwork, SiLeetcode } from "react-icons/si";
 import { HiDownload, HiArrowNarrowRight, HiChatAlt2 } from "react-icons/hi";
-import profile from "../../assets/BirhanuProfile.png";
+import profile from "../../assets/BireProfile.jpg";
 
 const Hero = () => {
   return (
@@ -100,7 +100,7 @@ const Hero = () => {
         <div className="relative flex justify-center items-center order-1 lg:order-2 mb-10 lg:mb-0">
           <div className="absolute w-[85%] h-[105%] bg-[#e8f0fe] dark:bg-primary/10 rounded-full rotate-3 -z-10 blur-xl" />
 
-          <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg aspect-square rounded-full overflow-hidden shadow-2xl border-4 border-card">
+          <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg aspect-square rounded-full overflow-hidden shadow-sm border-4 border-card">
             <img
               src={profile}
               alt="Birhanu"
