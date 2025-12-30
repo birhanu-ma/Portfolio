@@ -3,7 +3,7 @@ import { HiMoon, HiSun } from 'react-icons/hi';
 
 const ThemeToggle = () => {
   const [isDark, setIsDark] = useState(
-    localStorage.getItem('theme') === 'dark' || 
+    localStorage.getItem('theme') === 'light' || 
     (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
   );
 
