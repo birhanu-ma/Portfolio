@@ -41,7 +41,7 @@ const Contact = () => {
       color: "bg-[#0A66C2]",
       link: "https://www.linkedin.com/in/birhanu-matebe",
     },
-    { icon: <SiUpwork />, color: "bg-[#14A800]", link: "#" },
+    { icon: <SiUpwork />, color: "bg-[#14A800]", link: "" },
     {
       icon: <SiLeetcode />,
       color: "bg-[#FFA116]",
