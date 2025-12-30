@@ -31,18 +31,24 @@ const Hero = () => {
             </h1>
 
             <h2 className="text-2xl md:text-3xl text-foreground/70 font-medium mt-6">
-              Full-Stack Engineer 
+              Electrical & Computer Engineer
+              <br />
+              Data Science & Full-Stack Developer
             </h2>
 
             <p className="text-foreground/50 text-lg md:text-xl max-w-xl leading-relaxed mt-6">
-              Building scalable, intelligent applications in modern web technologies, cloud architecture, and
-              machine learning integration.
+              Building scalable, intelligent applications in modern web
+              technologies, cloud architecture, and machine learning
+              integration.
             </p>
           </div>
 
           {/* Call to Action Buttons */}
           <div className="flex flex-wrap gap-4 items-center">
-            <a href="#experience" className="flex items-center gap-2 bg-[#4285F4] text-white px-4 py-3.5 rounded-full font-semibold shadow-lg hover:bg-blue-600 transition-all">
+            <a
+              href="#experience"
+              className="flex items-center gap-2 bg-[#4285F4] text-white px-4 py-3.5 rounded-full font-semibold shadow-lg hover:bg-blue-600 transition-all"
+            >
               View My Work <HiArrowNarrowRight className="text-xl" />
             </a>
 
