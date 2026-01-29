@@ -52,7 +52,7 @@ const Hero = () => {
             </a>
 
             <a
-              href="/Birhanu_Matebe.pdf"
+              href="/Birhanu-Matebe.pdf"
               download
               className="flex items-center gap-2 bg-[#34A853] text-white px-4 py-3.5 rounded-full font-semibold shadow-lg hover:bg-green-600 transition-all cursor-pointer"
             >
