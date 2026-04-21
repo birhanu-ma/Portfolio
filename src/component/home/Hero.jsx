@@ -8,19 +8,18 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="w-screen min-h-screen bg-background text-foreground flex items-center justify-center relative transition-colors duration-300 py-12 px-4 sm:px-6"
+      className="w-screen min-h-screen bg-background text-foreground flex items-center justify-center relative transition-colors duration-300 py-16 sm:py-14 px-4 sm:px-6"
     >
       {/* Background Decorative Circles */}
       <div className="absolute top-[40%] right-[10%] w-64 h-64 bg-[#fff9e6] dark:bg-primary/5 rounded-full -z-10 opacity-70 blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#e6f4ea] dark:bg-primary/5 rounded-full -z-10 blur-3xl opacity-50" />
 
-      <div className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-16">
+      <div className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2  items-center gap-8 lg:gap-16">
         {/* Left Content Side */}
         <div className="flex flex-col space-y-8 order-2 lg:order-1 text-center lg:text-left">
           <div>
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-none">
-              Hi, I'm{" "}
-              <span className="text-[#4285F4]">B</span>
+              Hi, I'm <span className="text-[#4285F4]">B</span>
               <span className="text-[#EA4335]">i</span>
               <span className="text-[#34A853]">r</span>
               <span className="text-[#FBBC05]">h</span>
