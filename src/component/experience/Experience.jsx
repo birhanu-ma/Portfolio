@@ -11,9 +11,9 @@ const Experience = () => {
       location: "Addis Ababa, Ethiopia · Remote/Hybrid",
       duration: "November 2025 – Present",
       achievements: [
-        "Achieved scores above 90/100 across five advanced capstone projects in fraud detection, credit risk modeling, insurance analytics, renewable energy forecasting, and customer experience analytics.",
-        "Developed end-to-end machine learning solutions using Python, Pandas, Scikit-learn, XGBoost, SHAP, FastAPI, MLflow, Docker, and PostgreSQL.",
-        "Built production-ready, explainable, and regulatory-compliant models for real-world financial and business applications.",
+        "Completed the intensive 12-week KAIM program with distinction, specializing in production-grade AI and Machine Learning Engineering.",
+        "Architected end-to-end solutions using a modern stack including Python, FastAPI, MLflow, Docker, and PostgreSQL to solve complex industrial challenges.",
+        "Engineered explainable and regulatory-compliant models for high-stakes sectors, integrating Generative AI (RAG) and advanced Big Data pipelines.",
       ],
     },
     {
@@ -89,7 +89,7 @@ const Experience = () => {
       id="experience"
       className="bg-background py-24 px-6 md:px-12 font-sans text-foreground transition-colors duration-300"
     >
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl sm:max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-extrabold text-foreground mb-4">

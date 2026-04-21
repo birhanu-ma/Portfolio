@@ -1,33 +1,77 @@
-import React from 'react';
-import { FaCode, FaServer, FaDatabase, FaMicrochip, FaBrain, FaGraduationCap } from 'react-icons/fa';
+import React from "react";
+import {
+  FaCode,
+  FaServer,
+  FaDatabase,
+  FaMicrochip,
+  FaBrain,
+  FaGraduationCap,
+} from "react-icons/fa";
 
 const About = () => {
   return (
-    <section id="about" className="bg-background min-h-screen pt-24 pb-16 px-6 md:px-12 font-sans text-foreground transition-colors duration-300">
-      
+    <section
+      id="about"
+      className="bg-background min-h-screen pt-24 pb-16 px-6 md:px-12 font-sans text-foreground transition-colors duration-300"
+    >
       {/* Main Header with Underline */}
       <div className="max-w-6xl mx-auto text-center mb-16">
-        <h1 className="text-4xl font-extrabold text-foreground mb-2">About Birhanu Matebe Gerem</h1>
+        <h1 className="text-4xl font-extrabold text-foreground mb-2">
+          About Birhanu Matebe Gerem
+        </h1>
         <div className="h-1 w-24 bg-primary mx-auto rounded-full"></div>
       </div>
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
-        
         {/* Left Column: Biography */}
         <div className="lg:col-span-7 space-y-8 text-left">
           <div>
             <h2 className="text-2xl font-bold text-foreground mb-6 leading-tight">
-              Electrical & Computer Engineer | Data Science & Full-Stack Developer
+              Electrical & Computer Engineer | Data Science & Full-Stack
+              Developer
             </h2>
-            <div className="space-y-5 text-lg text-foreground/70 leading-relaxed">
+            <div class="space-y-6 text-lg leading-relaxed">
               <p>
-                I'm <span className="font-semibold text-foreground">Birhanu Matebe Gerem</span>, a final-year Electrical and Computer Engineering student at Addis Ababa Science and Technology University with a strong passion for building intelligent, secure, and scalable systems that solve real-world problems.
+                I am{" "}
+                <span class="font-bold text-foreground">
+                  Birhanu Matebe Gerem
+                </span>
+                , a final-year Electrical and Computer Engineering student at
+                Addis Ababa Science and Technology University. I bridge the gap
+                between physical hardware and intelligent software, specializing
+                in <strong>Full-Stack Architecture</strong>,{" "}
+                <strong>Production AI</strong>, and{" "}
+                <strong>Embedded IoT Systems</strong>.
               </p>
+
               <p>
-                I blend hardware and software expertise from embedded IoT systems to full-stack web applications and advanced machine learning models. Currently, I am an active intern in the prestigious <span className="font-semibold text-primary">Kifiya AI Mastery (KAIM) Program</span>, consistently scoring above 90/100 on industry-grade capstone projects in fraud detection, credit risk modeling, insurance analytics, renewable energy forecasting, and customer experience analytics.
+                My hardware-aware approach is rooted in my engineering
+                background, further enhanced by a distinction from the{" "}
+                <a
+                  href="https://10academy.org/trainings/kaim"
+                  class="text-primary underline font-medium"
+                  target="_blank"
+                >
+                  Kifiya AI Mastery (KAIM) Program
+                </a>
+                . This combination allows me to build robust data pipelines and
+                machine learning models that interface seamlessly with physical
+                systems and big data environments.
               </p>
+
               <p>
-                Whether it's engineering smart devices, developing secure full-stack platforms, or building production-ready ML systems, I deliver clean, efficient, and impactful solutions with a focus on security, performance, and user experience.
+                Driven by engineering rigor, I am currently refining my
+                problem-solving skills at{" "}
+                <a
+                  href="https://a2sv.org/"
+                  class="text-primary underline font-medium"
+                  target="_blank"
+                >
+                  A2SV
+                </a>
+                . I focus on delivering clean, scalable solutions that leverage{" "}
+                <strong>Generative AI</strong> and <strong>MLOps</strong> to
+                solve complex, real-world challenges.
               </p>
             </div>
           </div>
@@ -40,10 +84,12 @@ const About = () => {
               </h3>
               <ul className="space-y-3 text-foreground/60">
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span> Full-Stack & Secure Web Development
+                  <span className="text-primary">•</span> Full-Stack & Secure
+                  Web Development
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span> Machine Learning & MLOps (KAIM Intern)
+                  <span className="text-primary">•</span> Machine Learning &
+                  MLOps (KAIM Intern)
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary">•</span> Embedded Systems & IoT
@@ -57,13 +103,17 @@ const About = () => {
               </h3>
               <ul className="space-y-3 text-foreground/60">
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span> KAIM Intern – Scoring &gt;90/100 on all ongoing capstones
+                  <span className="text-primary">•</span>
+                  KAIM Graduate – Completed the AI Mastery Program with
+                  Distinction 
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span> Built university-wide Student Mentorship Platform at AASTU
+                  <span className="text-primary">•</span> Built university-wide
+                  Student Mentorship Platform at AASTU
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span> Developed production-grade ML systems with FastAPI, Docker & MLflow
+                  <span className="text-primary">•</span> Developed
+                  production-grade ML systems with FastAPI, Docker & MLflow
                 </li>
               </ul>
             </div>
@@ -78,35 +128,34 @@ const About = () => {
             </h3>
 
             <div className="space-y-6">
-              <CompetencyItem 
+              <CompetencyItem
                 icon={<FaCode className="text-primary" />}
-                title="Frontend Development" 
-                desc="React.js, Next.js, Tailwind CSS – Building responsive and intuitive user interfaces" 
+                title="Frontend Development"
+                desc="React.js, Next.js, Tailwind CSS – Building responsive and intuitive user interfaces"
               />
-              <CompetencyItem 
+              <CompetencyItem
                 icon={<FaServer className="text-primary" />}
-                title="Backend & Full-Stack" 
-                desc="Node.js, Express, Django, FastAPI – Secure, scalable server-side solutions" 
+                title="Backend & Full-Stack"
+                desc="Node.js, Express, FastAPI – Secure, scalable server-side solutions"
               />
-              <CompetencyItem 
+              <CompetencyItem
                 icon={<FaDatabase className="text-primary" />}
-                title="Databases & Tools" 
-                desc="MySQL, MongoDB, PostgreSQL, Git, REST API – Efficient data management" 
+                title="Databases & Tools"
+                desc="MySQL, MongoDB, PostgreSQL, Git, REST API – Efficient data management"
               />
-              <CompetencyItem 
+              <CompetencyItem
                 icon={<FaMicrochip className="text-primary" />}
-                title="Embedded & IoT Systems" 
-                desc="Arduino, Sensors, RFID – Smart hardware solutions for automation and security" 
+                title="Embedded & IoT Systems"
+                desc="Arduino, Sensors, RFID – Smart hardware solutions for automation and security"
               />
-              <CompetencyItem 
+              <CompetencyItem
                 icon={<FaBrain className="text-primary" />}
-                title="AI & Machine Learning" 
-                desc="Scikit-learn, XGBoost, SHAP, NLP, MLflow, Docker – End-to-end intelligent systems" 
+                title="AI & Machine Learning"
+                desc="Scikit-learn, XGBoost, SHAP, NLP, MLflow, Docker – End-to-end intelligent systems"
               />
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );
@@ -114,16 +163,12 @@ const About = () => {
 
 const CompetencyItem = ({ icon, title, desc }) => (
   <div className="group flex items-start gap-4">
-    <div className="mt-1 text-xl">
-      {icon || null}
-    </div>
+    <div className="mt-1 text-xl">{icon || null}</div>
     <div>
       <h4 className="font-bold text-foreground text-md mb-1 group-hover:text-primary transition-colors">
         {title}
       </h4>
-      <p className="text-sm text-foreground/50 leading-relaxed">
-        {desc}
-      </p>
+      <p className="text-sm text-foreground/50 leading-relaxed">{desc}</p>
     </div>
   </div>
 );
