@@ -3,7 +3,7 @@ import { HiOutlineLocationMarker, HiOutlineExternalLink, HiOutlineCalendar } fro
 
 const ExperienceCard = ({ role, type, company, companyUrl, location, duration, achievements, isLatest }) => {
   return (
-    <div className="relative pl-4 sm:pl-8 pb-12 group text-left">
+    <div className="relative pl-8 pb-12 group text-left">
       {/* Timeline Vertical Line */}
       {!isLatest && (
         <div className="absolute left-[11px] top-2 h-full w-0.5 bg-border group-last:hidden"></div>
@@ -13,10 +13,10 @@ const ExperienceCard = ({ role, type, company, companyUrl, location, duration, a
       <div className="absolute left-0 top-1.5 w-6 h-6 rounded-full border-4 border-card bg-primary shadow-sm z-10"></div>
 
       {/* Main Card Content */}
-      <div className="bg-card p-2 md:p-8 rounded-2xl shadow-sm border border-border hover:shadow-md hover:border-primary/50 transition-all duration-300">
+      <div className="bg-card p-6 md:p-8 rounded-2xl shadow-sm border border-border hover:shadow-md hover:border-primary/50 transition-all duration-300">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
           <div>
-            <div className="flex items-center flex-col sm:flex-row gap-3 mb-1">
+            <div className="flex items-center gap-3 mb-1">
               <h3 className="text-xl font-bold text-foreground">{role}</h3>
               
               <span className={`px-3 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider 

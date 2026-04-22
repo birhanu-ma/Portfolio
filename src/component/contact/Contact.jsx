@@ -39,7 +39,7 @@ const Contact = () => {
     {
       icon: <FaLinkedinIn />,
       color: "bg-[#0A66C2]",
-      link: "https://www.linkedin.com/in/bire-matebe-5399ba3b1/",
+      link: "https://www.linkedin.com/in/birhanu-matebe",
     },
     { icon: <SiUpwork />, color: "bg-[#14A800]", link: "" },
     {
@@ -51,12 +51,10 @@ const Contact = () => {
 
   return (
     /* Changed bg-white to bg-background and text-slate to text-foreground */
-    <section
-      id="contact"
-      className="bg-background py-24 px-6 md:px-12 font-sans text-foreground transition-colors duration-300"
-    >
+    <section id="contact" className="bg-background py-24 px-6 md:px-12 font-sans text-foreground transition-colors duration-300">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-24">
+          
           {/* Left Column: Image/Illustration Div */}
           <div className="w-full md:w-1/2 flex justify-center">
             {/* Changed border-slate-100 to border-border (implicit via shadow/overflow) */}

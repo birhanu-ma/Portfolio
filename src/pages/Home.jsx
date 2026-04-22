@@ -10,7 +10,7 @@ import "../App.css";
 import Footer from "../component/layout/Footer";
 function Home() {
   return (
-    <div>
+    <>
       <Navbar />
       <Hero />
       <About />
@@ -20,7 +20,7 @@ function Home() {
       <EducationAndCertification />
       <Contact />
       <Footer />
-    </div>
+    </>
   );
 }
 

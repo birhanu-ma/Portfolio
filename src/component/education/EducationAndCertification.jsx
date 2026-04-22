@@ -45,10 +45,7 @@ const EducationAndCertification = () => {
       institution: "Kifiya",
       institutionUrl: "https://kifiya.com",
       date: "December 2025",
-
-      description: 
-  "Completed the intensive 12-week KAIM program with distinction, specializing in production-grade AI and Machine Learning Engineering"
-  
+      description: "Scored >90/100 across all five industry-grade capstone projects in Data Science & Machine Learning."
     }
   ];
 
