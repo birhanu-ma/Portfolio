@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="w-screen min-h-screen bg-background text-foreground flex items-center justify-center relative transition-colors duration-300 py-12 px-4 sm:px-6"
+      className="w-screen min-h-screen bg-background sm:pt-24 text-foreground flex items-center justify-center relative transition-colors duration-300 py-12 px-4 sm:px-6"
     >
       {/* Background Decorative Circles */}
       <div className="absolute top-[40%] right-[10%] w-64 h-64 bg-[#fff9e6] dark:bg-primary/5 rounded-full -z-10 opacity-70 blur-3xl" />
