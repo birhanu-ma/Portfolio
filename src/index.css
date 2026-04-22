@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
-
+html, body {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
 @theme {
   /* Color variable mappings */
   --color-border: hsl(var(--border));
@@ -51,7 +55,9 @@
     @apply bg-background text-foreground transition-colors duration-300;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+
 }
+
 
 
 
@@ -94,8 +100,8 @@
 
 
 #root {
-  max-width: 100%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
   padding: 0;
-  text-align: center;
+  
 }
