@@ -52,11 +52,11 @@ const Hero = () => {
             </a>
 
             <a
-              href="/Birhanu-Matebe.pdf"
+              href="https://drive.google.com/file/d/1-sE5CLKDJZvAacZaSFZIP8dZ2Rt7DtWh/view?usp=sharing"
               download
               className="flex items-center gap-2 bg-[#34A853] text-white px-4 py-3.5 rounded-full font-semibold shadow-lg hover:bg-green-600 transition-all cursor-pointer"
             >
-              Download Resume <HiDownload className="text-xl" />
+              Look At My Resume
             </a>
 
             <a
