@@ -3,6 +3,44 @@ import EducationCard from "./EducationCard";
 import CertificationCard from "./CertificationCard";
 
 const EducationAndCertification = () => {
+  const certificationData = [
+    {
+      title: "Kifiya AI Mastery (KAIM) Program Completion",
+      institution: "Kifiya Financial Technology & 10 Academy ",
+      institutionUrl: "https://kifiya.com",
+      certificateUrl:
+        "https://drive.google.com/file/d/1jDBklL5OWvRcjiH4zFTmI7wBERaThHAg/view?usp=sharing",
+      date: "November 2025 – March 2026",
+      bullets: [
+        "12-week intensive residency in ML Engineering and Data Engineering for fintech",
+        "Graduated with Distinction scored above 90/100 across all twelve industry-grade capstone projects in fraud detection, credit risk, insurance analytics, and customer experience",
+      ],
+    },
+    {
+      title: "Advanced Learning Algorithms",
+      institution: "Coursera · Andrew Ng / Stanford  ",
+      institutionUrl: "https://www.coursera.org",
+      certificateUrl:
+        "https://www.coursera.org/account/accomplishments/verify/3M766N5BQT1X",
+      date: "November 2025 – March 2026",
+      bullets: [
+        "Topics: Neural Networks, Backpropagation, Gradient Descent, Bias-Variance Tradeoff, Recommender Systems, and Reinforcement Learning",
+        "Strengthened theoretical foundation for production-grade ML systems",
+      ],
+    },
+    {
+      title: "Wellness Hackathon 2026 – Certificate of Participation",
+      institution: "ALX Ethiopia, Kuriftu Resorts & WeVa Sphere",
+      institutionUrl: "https://www.alxafrica.com",
+      certificateUrl:
+        "https://drive.google.com/file/d/1itf17YuSavWdRb-hvkZQTbVDznTcsTJF/view?usp=sharing", // E.g., /assets/Birhanu Matebe (2).pdf
+      date: "June 2026",
+      bullets: [
+        "Actively participated in a high-impact innovation sprint focused on advancing health, beauty, and lifestyle technology in Ethiopia.",
+        "Collaborated in a team environment to design and prototype tech-driven solutions addressing real-world personal vitality and wellness challenges.",
+      ],
+    },
+  ];
   const educationData = [
     {
       title: "Bachelor of Science in Electrical and Computer Engineering",
@@ -14,11 +52,12 @@ const EducationAndCertification = () => {
         "Hands-on projects in full-stack development, machine learning, and IoT systems.",
       ],
     },
-
     {
       title: "Coding Academy",
       institution: "Google Developer Group",
       institutionUrl: "https://developers.google.com/community/gdg",
+      recordUrl:
+        "https://drive.google.com/file/d/1iN8i-Uf1kqnCbzkuDzKgsIGmwHXo_nKa/view?usp=sharing", // Optional link
       date: "2024 – 2025",
       description:
         "Intensive web development bootcamp focused on modern frontend technologies.",
@@ -30,39 +69,14 @@ const EducationAndCertification = () => {
     {
       title: "Problem Solving & Algorithms",
       institution: "A2SV (Africa to Silicon Valley)",
-      institutionUrl: "https://developers.google.com/community/gdg",
+      institutionUrl: "https://a2sv.org",
       date: "2024 – present",
-
       bullets: [
         "Intensive cohort-based training in data structures, algorithms, and competitive programming",
         "Selective program focused on preparing engineers for top global tech companies",
       ],
     },
   ];
-
-  const certificationData = [
-    {
-      title: "Kifiya AI Mastery (KAIM) Program Completion",
-      institution: "Kifiya Financial Technology & 10 Academy ",
-      institutionUrl: "https://kifiya.com",
-      date: "November 2025 – March 2026",
-      bullets: [
-        "12-week intensive residency in ML Engineering and Data Engineering for fintech",
-        "Graduated with Distinction — scored above 90/100 across all twelve industry-grade capstone projects in fraud detection, credit risk, insurance analytics, and customer experience",
-      ],
-    },
-    {
-      title: "Advanced Learning Algorithms",
-      institution: "Coursera · Andrew Ng / Stanford  ",
-      institutionUrl: "https://www.coursera.org",
-      date: "November 2025 – March 2026",
-      bullets: [
-        "Topics: Neural Networks, Backpropagation, Gradient Descent, Bias-Variance Tradeoff, Recommender Systems, and Reinforcement Learning",
-        "Strengthened theoretical foundation for production-grade ML systems",
-      ],
-    },
-  ];
-
   return (
     <section
       id="education"

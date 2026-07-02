@@ -10,34 +10,13 @@ const Hero = () => {
       id="home"
       className="w-full min-h-screen bg-transparent text-foreground flex items-center justify-center relative overflow-hidden pt-24 pb-12 px-6 sm:px-12 lg:px-16"
     >
-      {/* Structural Animation & Variable Keyframes */}
-      <style>{`
-        @keyframes fadeInUp {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes scaleIn {
-          from { opacity: 0; transform: scale(0.96); }
-          to { opacity: 1; transform: scale(1); }
-        }
-        .animate-fade-in-up {
-          animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-        .animate-scale-in {
-          animation: scaleIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-      `}</style>
-
-      {/* Decorative backdrop blurring rings that adapt to dark/light theme shifts without explicit color blocks */}
+      {/* Decorative backdrop blurring rings */}
       <div className="absolute top-[20%] right-[5%] w-[500px] h-[500px] bg-foreground/5 rounded-full -z-10 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] bg-foreground/5 rounded-full -z-10 blur-[140px] pointer-events-none" />
 
       <div className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-12 items-center gap-12 lg:gap-16 relative z-10">
         {/* Left Content Column */}
-        <div
-          className="flex flex-col space-y-8 order-2 lg:order-1 text-center lg:text-left lg:col-span-7 opacity-0 animate-fade-in-up"
-          style={{ animationDelay: "100ms" }}
-        >
+        <div className="flex flex-col space-y-8 order-2 lg:order-1 text-center lg:text-left lg:col-span-7 transition-all duration-1000 ease-out translate-y-0 opacity-100 delay-100">
           <div className="space-y-4">
             <span className="text-xs uppercase tracking-[0.2em] text-foreground/60 font-semibold block">
               Available for Full-Time Roles & Contracting
@@ -75,7 +54,7 @@ const Hero = () => {
             </a>
 
             <a
-              href="https://drive.google.com/file/d/1-sE5CLKDJZvAacZaSFZIP8dZ2Rt7DtWh/view?usp=sharing"
+              href="https://drive.google.com/file/d/1TVwiEYDG-uRba79op7z3vO52NhHwGQYv/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-transparent text-foreground border border-foreground/30 px-6 py-3.5 rounded-xl font-medium tracking-wide shadow-sm hover:bg-foreground/5 hover:border-foreground/50 transition-all duration-200"
@@ -124,23 +103,20 @@ const Hero = () => {
         </div>
 
         {/* Right Content Image Column */}
-        <div
-          className="relative flex justify-center items-center lg:col-span-5 order-1 lg:order-2 opacity-0 animate-scale-in"
-          style={{ animationDelay: "300ms" }}
-        >
+        <div className="relative flex justify-center items-center lg:col-span-5 order-1 lg:order-2 transition-all duration-1000 ease-out opacity-100 delay-300">
           {/* Subtle Outer Clean Radial Ring */}
-          <div className="absolute inset-0 max-w-sm sm:max-w-md aspect-square rounded-full border border-foreground/10 scale-105 pointer-events-none -z-10" />
+          <div className="absolute inset-0 max-w-sm sm:max-w-md aspect-square rounded-full  scale-105 pointer-events-none -z-10" />
 
-          {/* Image Container — uses border-current or background utilities that adapt with themes */}
-          <div className="relative w-full max-w-sm sm:max-w-md aspect-square rounded-full overflow-hidden shadow-md border-[6px] border-card bg-muted/40">
+          {/* Image Container with explicit background coloring and contrast */}
+          <div className="relative w-full max-w-sm sm:max-w-md aspect-square rounded-full overflow-hidden shadow-md  bg-zinc-100 dark:bg-zinc-800">
             <img
               src={profile}
               alt="Birhanu Matebe"
-              className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-700 ease-in-out"
+              className="w-full h-full object-cover object-center scale-105 grayscale hover:grayscale-0 transition-all duration-700 ease-in-out mix-blend-multiply dark:mix-blend-normal"
             />
 
             {/* Minimal Status Verification Badge */}
-            <div className="absolute bottom-6 right-6 bg-foreground p-2 rounded-full border border-background shadow-md">
+            <div className="absolute bottom-6 right-6 bg-foreground p-2 rounded-full border border-background shadow-md z-20">
               <svg
                 className="w-4 h-4 text-background"
                 fill="none"
@@ -159,7 +135,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll indicator using dynamic theme color opacity */}
+      {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-foreground/30 animate-bounce hidden sm:block">
         <svg
           className="w-6 h-6"
