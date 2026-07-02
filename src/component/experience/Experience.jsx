@@ -9,7 +9,7 @@ const Experience = () => {
       company: "Kifiya AI Mastery (KAIM) Program",
       companyUrl: "https://10academy.org/",
       location: "Addis Ababa, Ethiopia · Remote/Hybrid",
-      duration: "November 2025 – Present",
+      duration: "November 2025 – March",
       achievements: [
         "Graduated with Distinction from a 12-week, project-based residency in Machine Learning Engineering and Data Engineering for the fintech sector",
         "Built a fraud detection model reaching 0.9995 AUC-PR and a Credit Risk / BNPL scoring system using advanced Python, SQL, and statistical modeling",

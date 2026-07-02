@@ -81,7 +81,9 @@ const About = () => {
               Background Statement
             </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-foreground mb-4">
-              About <span className="font-light text-foreground/60">Birhanu</span> Matebe
+              About{" "}
+              <span className="font-light text-foreground/60">Birhanu</span>{" "}
+              Matebe
             </h1>
             <div className="h-[2px] w-16 bg-foreground/40 rounded-full mx-auto"></div>
           </ScrollAnimateItem>
@@ -89,8 +91,10 @@ const About = () => {
           <div className="max-w-5xl w-full space-y-6 text-center lg:text-left mx-auto pt-4">
             <ScrollAnimateItem delayClass="delay-fast-1">
               <h2 className="text-xl md:text-3xl font-bold text-foreground tracking-tight leading-tight text-center">
-                Electrical and Computer Engineer 
-                <span className="hidden md:inline text-foreground/30 mx-3">|</span>
+                Electrical and Computer Engineer
+                <span className="hidden md:inline text-foreground/30 mx-3">
+                  |
+                </span>
                 <br className="md:hidden" />
                 Data Science and Full-Stack Developer
               </h2>
@@ -98,9 +102,12 @@ const About = () => {
 
             <ScrollAnimateItem delayClass="delay-fast-2">
               <p className="text-base md:text-xl leading-relaxed text-foreground/60 text-center font-normal max-w-4xl mx-auto">
-                I build systems that function smoothly across screens, datasets, and circuits. 
-                As an Electrical and Computer Engineer from <strong>Addis Ababa Science and Technology University</strong>, 
-                I map complex real-world challenges into structural software architecture, resilient production data models, and scalable code bases.
+                I build systems that function smoothly across screens, datasets,
+                and circuits. As an Electrical and Computer Engineer from{" "}
+                <strong>Addis Ababa Science and Technology University</strong>,
+                I map complex real-world challenges into structural software
+                architecture, resilient production data models, and scalable
+                code bases.
               </p>
             </ScrollAnimateItem>
           </div>
@@ -121,8 +128,20 @@ const About = () => {
 
             <ScrollAnimateItem delayClass="delay-fast-1" className="text-left">
               <p className="text-base md:text-lg leading-relaxed text-foreground/60 font-normal">
-                On the full-stack layout, I design end-to-end applications that prioritize absolute security. My 
-                <strong> Blockchain-based clinical record system with AI chatbot assistant</strong> integrated React, Node.js, and Solidity smart contracts with an off-chain SHA-256 hash architecture to secure 100% tamper detection accuracy. This platform applies layered RBAC validation protocols verified comprehensively across 154 unique workflow test cases. I extend these systems into cloud-native boundaries through container orchestration, service meshes, and hardened infrastructure safety.
+                On the full-stack layout, I design end-to-end applications that
+                prioritize absolute security. My
+                <strong>
+                  {" "}
+                  Blockchain-based clinical record system with AI chatbot
+                  assistant
+                </strong>{" "}
+                integrated React, Node.js, and Solidity smart contracts with an
+                off-chain SHA-256 hash architecture to secure 100% tamper
+                detection accuracy. This platform applies layered RBAC
+                validation protocols verified comprehensively across 154 unique
+                workflow test cases. I extend these systems into cloud-native
+                boundaries through container orchestration, service meshes, and
+                hardened infrastructure safety.
               </p>
             </ScrollAnimateItem>
           </div>
@@ -143,10 +162,15 @@ const About = () => {
 
             <ScrollAnimateItem delayClass="delay-fast-1" className="text-left">
               <p className="text-base md:text-lg leading-relaxed text-foreground/60 font-normal">
-                Transitioning deep data into applied intelligence forms the center of my ML engineering methodology. 
-                I completed an intensive residency track in machine learning and data engineering for fintech environments. 
-                I construct robust fraud detection systems reaching 0.9995 AUC PR, credit rating risk models, and generative 
-                AI products driven by custom RAG setups and LLM refinement. Every implementation is grounded in professional MLOps systems: DVC for asset control, MLflow for lifecycle visibility, and robust CI/CD execution patterns.
+                Transitioning deep data into applied intelligence forms the
+                center of my ML engineering methodology. I completed an
+                intensive residency track in machine learning and data
+                engineering for fintech environments. I construct robust fraud
+                detection systems reaching 0.9995 AUC PR, credit rating risk
+                models, and generative AI products driven by custom RAG setups
+                and LLM refinement. Every implementation is grounded in
+                professional MLOps systems: DVC for asset control, MLflow for
+                lifecycle visibility, and robust CI/CD execution patterns.
               </p>
             </ScrollAnimateItem>
           </div>
@@ -167,9 +191,13 @@ const About = () => {
 
             <ScrollAnimateItem delayClass="delay-fast-1" className="text-left">
               <p className="text-base md:text-lg leading-relaxed text-foreground/60 font-normal">
-                The core logic originates at the hardware layer. My engineering training shapes how I evaluate constraints, 
-                compute loads, and unexpected system failure vectors. It introduces a calculated architectural precision that 
-                influences every framework deployment whether writing secure smart code pipelines, auditing a high-dimensional neural layer, or establishing high-availability production clusters.
+                The core logic originates at the hardware layer. My engineering
+                training shapes how I evaluate constraints, compute loads, and
+                unexpected system failure vectors. It introduces a calculated
+                architectural precision that influences every framework
+                deployment whether writing secure smart code pipelines, auditing
+                a high-dimensional neural layer, or establishing
+                high-availability production clusters.
               </p>
             </ScrollAnimateItem>
           </div>
@@ -182,7 +210,6 @@ const About = () => {
       <div className="w-full min-h-screen px-6 md:px-12 lg:px-16 border-t border-foreground/10 flex items-center py-20 justify-center">
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch text-left">
-            
             {/* Left Block: Core Competencies */}
             <div className="lg:col-span-7 bg-card border border-foreground/10 p-8 rounded-xl flex flex-col justify-between shadow-sm">
               <div>
@@ -197,35 +224,39 @@ const About = () => {
                     <CompetencyItem
                       icon={<FaCode className="text-foreground/70" />}
                       title="Frontend Architecture"
-                      desc="React.js, Next.js, Tailwind CSS — Designing clean, functional, and deeply responsive visual components."
+                      desc="React.js, Next.js, Vue 3, Nuxt 4, Tailwind CSS — Building responsive single-page frameworks with dynamic rendering and typed GraphQL modules."
                     />
                   </ScrollAnimateItem>
+
                   <ScrollAnimateItem delayClass="delay-fast-1">
                     <CompetencyItem
                       icon={<FaServer className="text-foreground/70" />}
                       title="Backend Services"
-                      desc="Node.js, Express, FastAPI — Creating strict, isolated, and highly performant server operations."
+                      desc="Node.js, Golang (>v1.22), Express, FastAPI — Engineering high-performance HTTP microservices, strict isolated business logic, and OpenAPI structures."
                     />
                   </ScrollAnimateItem>
+
                   <ScrollAnimateItem delayClass="delay-fast-1">
                     <CompetencyItem
                       icon={<FaDatabase className="text-foreground/70" />}
-                      title="Data Storage & Pipelines"
-                      desc="MySQL, MongoDB, PostgreSQL, REST API systems — Managing clean queries and data modeling."
+                      title="Database Systems"
+                      desc="PostgreSQL, MongoDB, MySQL, Hasura GraphQL — Designing relational data models, structured schemas, and optimized query indices."
                     />
                   </ScrollAnimateItem>
-                  <ScrollAnimateItem delayClass="delay-fast-1">
-                    <CompetencyItem
-                      icon={<FaMicrochip className="text-foreground/70" />}
-                      title="Embedded Systems & Automation"
-                      desc="Arduino, sensor networks, RFID integrations — Constructing low-level real-time hardware execution models."
-                    />
-                  </ScrollAnimateItem>
+
                   <ScrollAnimateItem delayClass="delay-fast-1">
                     <CompetencyItem
                       icon={<FaBrain className="text-foreground/70" />}
-                      title="Machine Learning Engineering"
-                      desc="Scikit-learn, XGBoost, SHAP, NLP patterns, MLflow, Docker execution environments."
+                      title="ML & Data Science"
+                      desc="Scikit-learn, XGBoost, Pandas, SHAP — Formulating tabular analytics, feature interpretations, and financial risk models."
+                    />
+                  </ScrollAnimateItem>
+
+                  <ScrollAnimateItem delayClass="delay-fast-1">
+                    <CompetencyItem
+                      icon={<FaMicrochip className="text-foreground/70" />}
+                      title="Production MLOps & IoT"
+                      desc="Docker Compose, MLflow, DVC, C++, Arduino — Managing data version control, lifecycle pipelines, container orchestration, and low-level system integrations."
                     />
                   </ScrollAnimateItem>
                 </div>
@@ -234,61 +265,97 @@ const About = () => {
 
             {/* Right Block: Structured Track Metadata */}
             <div className="lg:col-span-5 flex flex-col gap-6">
-              
               {/* Card 2: Key Milestones */}
-              <ScrollAnimateItem className="flex-1 flex" delayClass="delay-fast-1">
+              <ScrollAnimateItem
+                className="flex-1 flex"
+                delayClass="delay-fast-1"
+              >
                 <div className="bg-card border border-foreground/10 p-6 rounded-xl w-full flex flex-col justify-center shadow-sm">
                   <h3 className="text-base font-bold uppercase tracking-wider text-foreground mb-4 flex items-center gap-2">
                     <span>🏆</span> Strategic Track Records
                   </h3>
                   <ul className="space-y-3 text-foreground/70 text-sm">
                     <li className="flex items-start gap-2.5">
-                      <span className="text-foreground font-bold mt-0.5">•</span>
-                      <span>Graduated with Distinction from Kifiya AI Mastery (KAIM) Track</span>
+                      <span className="text-foreground font-bold mt-0.5">
+                        •
+                      </span>
+                      <span>
+                        Graduated with Distinction from Kifiya AI Mastery (KAIM)
+                        Track
+                      </span>
                     </li>
                     <li className="flex items-start gap-2.5">
-                      <span className="text-foreground font-bold mt-0.5">•</span>
-                      <span>Constructed 100% accurate tamper-proof ledger validation systems</span>
+                      <span className="text-foreground font-bold mt-0.5">
+                        •
+                      </span>
+                      <span>
+                        Constructed 100% accurate tamper-proof ledger validation
+                        systems
+                      </span>
                     </li>
                     <li className="flex items-start gap-2.5">
-                      <span className="text-foreground font-bold mt-0.5">•</span>
-                      <span>Deployed financial risk analysis models reaching 0.9995 AUC PR benchmarks</span>
+                      <span className="text-foreground font-bold mt-0.5">
+                        •
+                      </span>
+                      <span>
+                        Deployed financial risk analysis models reaching 0.9995
+                        AUC PR benchmarks
+                      </span>
                     </li>
                     <li className="flex items-start gap-2.5">
-                      <span className="text-foreground font-bold mt-0.5">•</span>
-                      <span>B.Sc. candidate in Electrical & Computer Engineering, AASTU</span>
+                      <span className="text-foreground font-bold mt-0.5">
+                        •
+                      </span>
+                      <span>
+                        B.Sc. candidate in Electrical & Computer Engineering,
+                        AASTU
+                      </span>
                     </li>
                   </ul>
                 </div>
               </ScrollAnimateItem>
 
               {/* Card 3: Domain Specializations */}
-              <ScrollAnimateItem className="flex-1 flex" delayClass="delay-fast-2">
+              <ScrollAnimateItem
+                className="flex-1 flex"
+                delayClass="delay-fast-2"
+              >
                 <div className="bg-card border border-foreground/10 p-6 rounded-xl w-full flex flex-col justify-center shadow-sm">
                   <h3 className="text-base font-bold uppercase tracking-wider text-foreground mb-4 flex items-center gap-2">
                     <span>🎯</span> Active Domains
                   </h3>
                   <ul className="space-y-3 text-foreground/70 text-sm">
                     <li className="flex items-start gap-2.5">
-                      <span className="text-foreground font-bold mt-0.5">•</span>
-                      <span>Secure Enterprise Web Architecture</span>
+                      <span className="text-foreground font-bold mt-0.5">
+                        •
+                      </span>
+                      <span>Full-Stack Web & Microservice Architecture</span>
                     </li>
                     <li className="flex items-start gap-2.5">
-                      <span className="text-foreground font-bold mt-0.5">•</span>
-                      <span>Production MLOps Engineering pipelines</span>
+                      <span className="text-foreground font-bold mt-0.5">
+                        •
+                      </span>
+                      <span>
+                        Production MLOps Engineering & Lifecycle Pipelines
+                      </span>
                     </li>
                     <li className="flex items-start gap-2.5">
-                      <span className="text-foreground font-bold mt-0.5">•</span>
-                      <span>Cloud-Native & Distributed Orchestration</span>
+                      <span className="text-foreground font-bold mt-0.5">
+                        •
+                      </span>
+                      <span>Relational Modeling & GraphQL API Gateways</span>
                     </li>
                     <li className="flex items-start gap-2.5">
-                      <span className="text-foreground font-bold mt-0.5">•</span>
-                      <span>Smart Contracts & Web3 Web Systems</span>
+                      <span className="text-foreground font-bold mt-0.5">
+                        •
+                      </span>
+                      <span>
+                        Zero-Trust Security, RBAC & Identity Assertion (JWT)
+                      </span>
                     </li>
                   </ul>
                 </div>
               </ScrollAnimateItem>
-              
             </div>
           </div>
         </div>

@@ -1,15 +1,15 @@
-// CertificationCard.jsx
 import React, { useEffect, useRef, useState } from "react";
 import {
   HiOutlineExternalLink,
   HiOutlineCalendar,
-  HiOutlineCheckCircle,
+  HiOutlineAcademicCap,
 } from "react-icons/hi";
 
-const CertificationCard = ({
+const EducationCard = ({
   title,
   institution,
   institutionUrl,
+  recordUrl, // New Prop for the bottom link
   date,
   bullets,
 }) => {
@@ -48,15 +48,13 @@ const CertificationCard = ({
       }`}
     >
       <div>
-        {/* Header Block */}
+        {/* Header Metadata Block */}
         <div className="flex items-start justify-between gap-4 mb-4">
           <div className="space-y-1.5">
-            {/* Increased title text size to text-xl md:text-2xl */}
-            <h3 className="text-xl md:text-2xl font-black tracking-tight text-foreground leading-snug flex items-start gap-2.5">
-              <HiOutlineCheckCircle className="text-2xl mt-0.5 text-foreground/40 group-hover:text-foreground transition-colors shrink-0" />
+            <h3 className="text-xl md:text-2xl font-black tracking-tight text-foreground Plat-snug flex items-start gap-2.5">
+              <HiOutlineAcademicCap className="text-2xl mt-0.5 text-foreground/40 group-hover:text-foreground transition-colors shrink-0" />
               <span>{title}</span>
             </h3>
-            {/* Increased institution text size to text-base */}
             <p className="text-base font-bold text-foreground/60 pl-8.5">
               {institution}
             </p>
@@ -68,19 +66,18 @@ const CertificationCard = ({
               target="_blank"
               rel="noreferrer"
               className="text-foreground/40 hover:text-foreground transition-colors p-2 bg-foreground/[0.02] border border-foreground/5 rounded-lg shrink-0"
-              title="Verify Credentials"
+              title="Visit Institution Website"
             >
               <HiOutlineExternalLink size={18} />
             </a>
           )}
         </div>
 
-        {/* Bullet Deliverables with Structural Alignment */}
+        {/* Coursework & Program Bullet Descriptions */}
         {bullets && bullets.length > 0 && (
           <div className="pl-8.5 mb-6 border-l border-foreground/5 space-y-3 mt-4">
             <ul className="space-y-3">
               {bullets.map((bullet, index) => (
-                // Increased list font sizing to text-sm md:text-base
                 <li
                   key={index}
                   className="text-sm md:text-base text-foreground/60 leading-relaxed font-normal flex items-start gap-2.5"
@@ -94,12 +91,25 @@ const CertificationCard = ({
         )}
       </div>
 
-      {/* Date Stamp Footer */}
-      <div className="flex items-center gap-1.5 text-[11px] font-bold tracking-widest text-foreground/40 uppercase pl-8.5">
-        <HiOutlineCalendar className="text-base" /> {date}
+      {/* Footer Block: Date Stamp & See Academic Record Link */}
+      <div className="flex flex-wrap items-center justify-between gap-3 pl-8.5 border-t border-foreground/[0.03] pt-4 mt-2">
+        <div className="flex items-center gap-1.5 text-[11px] font-bold tracking-widest text-foreground/40 uppercase">
+          <HiOutlineCalendar className="text-base" /> {date}
+        </div>
+
+        {recordUrl && (
+          <a
+            href={recordUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="text-[11px] font-extrabold tracking-wider text-foreground/50 hover:text-foreground uppercase transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 hover:after:w-full after:bg-foreground after:transition-all after:duration-300"
+          >
+            See academic record →
+          </a>
+        )}
       </div>
     </div>
   );
 };
 
-export default CertificationCard;
+export default EducationCard;
