@@ -11,75 +11,54 @@ const Experience = () => {
       location: "Addis Ababa, Ethiopia · Remote/Hybrid",
       duration: "November 2025 – Present",
       achievements: [
-        "Achieved scores above 90/100 across five advanced capstone projects in fraud detection, credit risk modeling, insurance analytics, renewable energy forecasting, and customer experience analytics.",
-        "Developed end-to-end machine learning solutions using Python, Pandas, Scikit-learn, XGBoost, SHAP, FastAPI, MLflow, Docker, and PostgreSQL.",
-        "Built production-ready, explainable, and regulatory-compliant models for real-world financial and business applications.",
+        "Graduated with Distinction from a 12-week, project-based residency in Machine Learning Engineering and Data Engineering for the fintech sector",
+        "Built a fraud detection model reaching 0.9995 AUC-PR and a Credit Risk / BNPL scoring system using advanced Python, SQL, and statistical modeling",
+        "Developed and deployed Generative AI solutions, including RAG, LLM fine-tuning, and prompt engineering for intelligent chatbots",
+        "Engineered end-to-end MLOps pipelines with DVC for data versioning and MLflow for experiment tracking, containerized with Docker and deployed via CI/CD",
+        "Architected ETL/ELT frameworks using DBT for large-scale data transformation and warehousing",
+        "Applied time series analysis and design thinking to deliver client-ready reports and interactive dashboards",
       ],
     },
     {
-      role: "Electrical Engineering Intern",
+      role: "Full-Stack Developer Intern Student Mentorship Platform",
       type: "Internship",
       company: "Addis Ababa Science and Technology University (AASTU)",
       companyUrl: "https://aastu.edu.et",
       location: "Addis Ababa, Ethiopia · On-site",
       duration: "June 2025 – September 2025 · 4 mos",
       achievements: [
-        "Pioneered integration of 20+ new UI components into a university-wide mentorship platform, ensuring strict adherence to design standards.",
-        "Developed a responsive, user-friendly platform with role-based user management for efficient access control and security.",
-        "Tech Stack: React.js, JavaScript, Node.js, Tailwind CSS.",
+        "Engineered a secure full-stack platform using JWT authentication and RBAC, supporting structured mentorship for 3,000+ AASTU students",
+        "Integrated 20+ new UI components and built real-time chat, mentor-mentee matching, and admin dashboards using React.js, Node.js, and Tailwind CSS",
+        "Reduced freshman adjustment challenges by ~30% through digitized academic, emotional, and career guidance",
+        "Stack: React.js · Node.js · JavaScript · Tailwind CSS · JWT · RBAC",
       ],
     },
     {
-      role: "Full-Stack Developer – Student Mentorship Platform",
-      type: "Internship Project",
-      company: "Addis Ababa Science and Technology University",
-      companyUrl: "https://www.aastu.edu.et/",
-      location: "Addis Ababa, Ethiopia",
-      duration: "June 2025 – September 2025",
+      role: "AI Research Intern, AI Talent Program",
+      type: "Internship",
+      company: "iCog Labs · Addis Ababa, Ethiopia",
+      companyUrl: "https://icog-labs.com/",
+      location: "Addis Ababa, Ethiopia · Hybrid",
+      duration: "july 2025 – September 2025 · 3 mos",
       achievements: [
-        "Engineered a secure full-stack platform using JWT authentication and RBAC, supporting structured mentorship for 3,000+ AASTU students.",
-        "Implemented real-time chat, mentor-mentee matching algorithm, profile management, and admin dashboards for engagement monitoring.",
-        "Reduced freshman adjustment challenges by ~30% through digitized academic, emotional, and career guidance.",
+        "Reviewed and synthesized AGI research papers (including Economic Attention Networks within the OpenCog/Hyperon framework), producing written technical articles on system architecture and optimization strategies",
+        "Contributed to the migration of core ECAN logic from C++ to MeTTa as part of OpenCog's transition to the Hyperon framework",
+        "Built a Transformer-based handwritten alphabet recognition model using TensorFlow, achieving 85%+ accuracy",
+        "Implemented a Hopfield network for associative memory, successfully retrieving correct stored images from distorted inputs",
       ],
     },
     {
-      role: "Full-Stack Developer – MindSpace Mental Wellness Platform",
-      type: "Academic Project",
-      company: "Google Developer Group",
-      companyUrl:
-        "https://gdg.community.dev/gdg-on-campus-addis-ababa-science-and-technology-university-addis-ababa-ethiopia/",
-      location: "Addis Ababa, Ethiopia",
-      duration: "April 2025 – June 2025",
+      role: "Software Developer Intern",
+      type: "Internship",
+      company:
+        "Addis Ababa City Administration Innovation and Technology Development Bureau (ITDB) ",
+      companyUrl: "https://aaitdb.gov.et/directorates/services/detail/10",
+      location: "Addis Ababa, Ethiopia · Hybrid",
+      duration: "july 2025 – September 2025 · 3 mos",
       achievements: [
-        "Designed and built a responsive web application for wellness tracking and community forums using React.js, Django, Vite, and Tailwind CSS.",
-        "Engineered 12 WCAG-compliant UI components, improving accessibility and user satisfaction by 37%.",
-        "Focused on secure authentication and privacy-protected interactions to encourage safe user participation.",
-      ],
-    },
-    {
-      role: "Embedded Systems Engineer – Smart Irrigation System",
-      type: "Academic Project",
-      company: "Addis Ababa Science and Technology University",
-      companyUrl: "https://www.aastu.edu.et/",
-      location: "Addis Ababa, Ethiopia",
-      duration: "September 2024 – July 2025",
-      achievements: [
-        "Designed and implemented an IoT-based automated irrigation system using Arduino to monitor soil moisture in real-time.",
-        "Achieved 20–30% reduction in water consumption by delivering water only when needed.",
-        "Promoted sustainable agriculture practices through efficient resource management.",
-      ],
-    },
-    {
-      role: "Embedded Systems Engineer – Smart Door Lock",
-      type: "Academic Project",
-      company: "Addis Ababa Science and Technology University",
-      companyUrl: "https://www.aastu.edu.et/",
-      location: "Addis Ababa, Ethiopia",
-      duration: "June 2025",
-      achievements: [
-        "Developed a dual-factor electronic access control system using RFID cards and keypad authentication with Arduino.",
-        "Implemented encrypted credential storage and anti-brute-force mechanisms for enhanced physical cybersecurity.",
-        "Significantly reduced risks of unauthorized entry compared to traditional key-based locks.",
+        "Built the frontend of a government employment platform using React.js, enabling unemployed citizens to register, apply for jobs, and request startup business support from the Ministry of Skill and Labor",
+        "Designed role-specific dashboards for citizens, Ministry of Skill and Labor, and Ministry of Labor officials each with tailored views to track applicant status from registration through support disbursement",
+        "Designed the database schema to support end-to-end workflow tracking across multiple ministries and user roles",
       ],
     },
   ];
@@ -87,32 +66,35 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="bg-background py-24 px-6 md:px-12 font-sans text-foreground transition-colors duration-300"
+      className="w-full bg-background font-sans text-foreground transition-colors duration-300 relative"
     >
-      <div className="max-w-4xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-extrabold text-foreground mb-4">
-            Birhanu's Professional Experience
+      {/* Structural full-screen Title Entry Header */}
+      <div className="w-full h-screen px-6 md:px-12 lg:px-16 flex flex-col justify-center items-center text-center border-b border-foreground/10">
+        <div className="max-w-7xl mx-auto w-full flex flex-col items-center">
+          <span className="text-xs uppercase tracking-[0.2em] text-foreground/50 font-semibold block mb-3">
+            Professional Timeline
+          </span>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-foreground mb-4">
+            Professional Experience
           </h2>
-          <div className="h-1 w-24 bg-primary mx-auto rounded-full mb-8"></div>
-          <p className="text-foreground/50 max-w-2xl mx-auto leading-relaxed">
-            My journey blending Electrical & Computer Engineering with
-            Full-Stack Development, Machine Learning, and Embedded Systems from
-            high-impact AI internships to building secure real-world solutions.
+          <div className="h-[2px] w-16 bg-foreground/40 rounded-full mb-6"></div>
+          <p className="text-foreground/60 max-w-3xl mx-auto text-base md:text-lg leading-relaxed font-normal">
+            A background blending Electrical & Computer Engineering concepts
+            with full-stack development, applied machine learning, and hardware
+            deployment constraints.
           </p>
         </div>
+      </div>
 
-        {/* Experience List */}
-        <div className="mt-12">
-          {experiences.map((exp, index) => (
-            <ExperienceCard
-              key={index}
-              {...exp}
-              isLatest={index === experiences.length - 1}
-            />
-          ))}
-        </div>
+      {/* Expanded Width Sequential Scroll Module */}
+      <div className="w-full max-w-none">
+        {experiences.map((exp, index) => (
+          <ExperienceCard
+            key={index}
+            {...exp}
+            isLatest={index === experiences.length - 1}
+          />
+        ))}
       </div>
     </section>
   );

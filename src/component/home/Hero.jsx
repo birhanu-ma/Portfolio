@@ -1,85 +1,110 @@
 import React from "react";
 import { FaGithub, FaLinkedinIn, FaEnvelope } from "react-icons/fa";
 import { SiUpwork, SiLeetcode } from "react-icons/si";
-import { HiDownload, HiArrowNarrowRight, HiChatAlt2 } from "react-icons/hi";
+import { HiArrowNarrowRight, HiChatAlt2 } from "react-icons/hi";
 import profile from "../../assets/BireProfile.jpg";
 
 const Hero = () => {
   return (
     <section
       id="home"
-      className="w-screen min-h-screen bg-background sm:pt-24 pt-16 text-foreground flex items-center justify-center relative transition-colors duration-300 py-12 px-4 sm:px-6"
+      className="w-full min-h-screen bg-transparent text-foreground flex items-center justify-center relative overflow-hidden pt-24 pb-12 px-6 sm:px-12 lg:px-16"
     >
-      {/* Background Decorative Circles */}
-      <div className="absolute top-[40%] right-[10%] w-64 h-64 bg-[#fff9e6] dark:bg-primary/5 rounded-full -z-10 opacity-70 blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#e6f4ea] dark:bg-primary/5 rounded-full -z-10 blur-3xl opacity-50" />
+      {/* Structural Animation & Variable Keyframes */}
+      <style>{`
+        @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes scaleIn {
+          from { opacity: 0; transform: scale(0.96); }
+          to { opacity: 1; transform: scale(1); }
+        }
+        .animate-fade-in-up {
+          animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .animate-scale-in {
+          animation: scaleIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+      `}</style>
 
-      <div className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-16">
-        {/* Left Content Side */}
-        <div className="flex flex-col space-y-8 order-2 lg:order-1 text-center lg:text-left">
-          <div>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-none">
+      {/* Decorative backdrop blurring rings that adapt to dark/light theme shifts without explicit color blocks */}
+      <div className="absolute top-[20%] right-[5%] w-[500px] h-[500px] bg-foreground/5 rounded-full -z-10 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] bg-foreground/5 rounded-full -z-10 blur-[140px] pointer-events-none" />
+
+      <div className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-12 items-center gap-12 lg:gap-16 relative z-10">
+        {/* Left Content Column */}
+        <div
+          className="flex flex-col space-y-8 order-2 lg:order-1 text-center lg:text-left lg:col-span-7 opacity-0 animate-fade-in-up"
+          style={{ animationDelay: "100ms" }}
+        >
+          <div className="space-y-4">
+            <span className="text-xs uppercase tracking-[0.2em] text-foreground/60 font-semibold block">
+              Available for Full-Time Roles & Contracting
+            </span>
+
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-foreground leading-[1.1]">
               Hi, I'm{" "}
-              <span className="text-[#4285F4]">B</span>
-              <span className="text-[#EA4335]">i</span>
-              <span className="text-[#34A853]">r</span>
-              <span className="text-[#FBBC05]">h</span>
-              <span className="text-[#4285F4]">a</span>
-              <span className="text-[#EA4335]">n</span>
-              <span className="text-[#FBBC05]">u</span>
+              <span className="font-light text-foreground/60">Birhanu</span>{" "}
+              Matebe
             </h1>
 
-            <h2 className="text-xl sm:text-2xl md:text-3xl text-foreground/70 font-medium mt-6">
+            <h2 className="text-lg sm:text-xl md:text-2xl text-foreground/80 font-medium tracking-tight">
               Electrical & Computer Engineer
-              <br className="hidden sm:block" />
+              <span className="hidden md:inline text-foreground/30 mx-3">
+                |
+              </span>
+              <br className="sm:block md:hidden" />
               Data Science & Full-Stack Developer
             </h2>
 
-            <p className="text-foreground/50 text-base sm:text-lg md:text-xl max-w-xl mx-auto lg:mx-0 leading-relaxed mt-6">
-              Building scalable, intelligent applications in modern web
-              technologies, cloud architecture, and machine learning
-              integration.
+            <p className="text-foreground/60 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal pt-2">
+              Building secure full-stack platforms, production machine learning
+              systems, and cloud-native infrastructure backed by an engineer's
+              instinct for architectural resilience.
             </p>
           </div>
 
-          {/* Call to Action Buttons */}
-          <div className="flex flex-wrap gap-4 items-center justify-center lg:justify-start">
+          {/* Professional Actions */}
+          <div className="flex flex-wrap gap-4 items-center justify-center lg:justify-start pt-2">
             <a
               href="#experience"
-              className="flex items-center gap-2 bg-[#4285F4] text-white px-4 py-3.5 rounded-full font-semibold shadow-lg hover:bg-blue-600 transition-all"
+              className="flex items-center gap-2 bg-foreground text-background px-6 py-3.5 rounded-xl font-medium tracking-wide shadow-sm hover:opacity-90 transition-all duration-200"
             >
-              View My Work <HiArrowNarrowRight className="text-xl" />
+              View My Work <HiArrowNarrowRight className="text-lg" />
             </a>
 
             <a
               href="https://drive.google.com/file/d/1-sE5CLKDJZvAacZaSFZIP8dZ2Rt7DtWh/view?usp=sharing"
-              download
-              className="flex items-center gap-2 bg-[#34A853] text-white px-4 py-3.5 rounded-full font-semibold shadow-lg hover:bg-green-600 transition-all cursor-pointer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-transparent text-foreground border border-foreground/30 px-6 py-3.5 rounded-xl font-medium tracking-wide shadow-sm hover:bg-foreground/5 hover:border-foreground/50 transition-all duration-200"
             >
-              Look At My Resume
+              Review Resume
             </a>
 
             <a
               href="#contact"
-              className="flex items-center gap-2 border-2 border-[#4285F4] text-[#4285F4] px-4 py-3.5 rounded-full font-semibold hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all bg-background shadow-sm no-underline cursor-pointer"
+              className="flex items-center gap-2 text-foreground/70 hover:text-foreground px-4 py-3.5 rounded-xl font-medium transition-all duration-200 group"
             >
-              Let's Connect <HiChatAlt2 className="text-xl" />
+              Let's Connect
+              <HiChatAlt2 className="text-xl text-foreground/40 group-hover:text-foreground/70 transition-colors" />
             </a>
           </div>
 
-          {/* Social Icons Row */}
-          <div className="flex items-center gap-4 pt-4 justify-center lg:justify-start">
+          {/* Social Profiles Row */}
+          <div className="flex items-center gap-3.5 pt-4 justify-center lg:justify-start">
             {[
-              { icon: <FaGithub />, link: "https://github.com/birhanu-ma" },
               {
                 icon: <FaLinkedinIn />,
                 link: "https://www.linkedin.com/in/birhanu-matebe",
               },
-              { icon: <SiUpwork />, link: "#" },
+              { icon: <FaGithub />, link: "https://github.com/birhanu-ma" },
               {
                 icon: <SiLeetcode />,
                 link: "https://leetcode.com/u/BirhanuMatebe/",
               },
+              { icon: <SiUpwork />, link: "#" },
               {
                 icon: <FaEnvelope />,
                 link: "mailto:birhanumatebe12@gmail.com",
@@ -88,28 +113,36 @@ const Hero = () => {
               <a
                 key={index}
                 href={social.link}
-                className="w-12 h-12 flex items-center justify-center rounded-full border border-border text-foreground/60 hover:text-primary hover:border-primary hover:shadow-md transition-all bg-card"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-11 h-11 flex items-center justify-center rounded-xl border border-foreground/10 text-foreground/60 hover:text-foreground hover:border-foreground/40 hover:bg-foreground/5 transition-all duration-200"
               >
-                <span className="text-xl">{social.icon}</span>
+                <span className="text-lg">{social.icon}</span>
               </a>
             ))}
           </div>
         </div>
 
-        {/* Right Image Side - Fully Responsive Circular Image (No Hair Clipping!) */}
-        <div className="relative flex justify-center items-center order-1 lg:order-2 mb-10 lg:mb-0">
-          <div className="absolute w-[85%] h-[105%] bg-[#e8f0fe] dark:bg-primary/10 rounded-full rotate-3 -z-10 blur-xl" />
+        {/* Right Content Image Column */}
+        <div
+          className="relative flex justify-center items-center lg:col-span-5 order-1 lg:order-2 opacity-0 animate-scale-in"
+          style={{ animationDelay: "300ms" }}
+        >
+          {/* Subtle Outer Clean Radial Ring */}
+          <div className="absolute inset-0 max-w-sm sm:max-w-md aspect-square rounded-full border border-foreground/10 scale-105 pointer-events-none -z-10" />
 
-          <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg aspect-square rounded-full overflow-hidden shadow-sm border-4 border-card">
+          {/* Image Container — uses border-current or background utilities that adapt with themes */}
+          <div className="relative w-full max-w-sm sm:max-w-md aspect-square rounded-full overflow-hidden shadow-md border-[6px] border-card bg-muted/40">
             <img
               src={profile}
-              alt="Birhanu"
-              className="w-full h-full object-cover object-top"
+              alt="Birhanu Matebe"
+              className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-700 ease-in-out"
             />
 
-            <div className="absolute top-6 right-6 bg-[#34A853] p-1.5 rounded-full border-2 border-white shadow-md">
+            {/* Minimal Status Verification Badge */}
+            <div className="absolute bottom-6 right-6 bg-foreground p-2 rounded-full border border-background shadow-md">
               <svg
-                className="w-5 h-5 text-white"
+                className="w-4 h-4 text-background"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -117,7 +150,7 @@ const Hero = () => {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth="3"
+                  strokeWidth="2.5"
                   d="M5 13l4 4L19 7"
                 />
               </svg>
@@ -126,10 +159,10 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Down Arrow Indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-foreground/20 animate-bounce">
+      {/* Scroll indicator using dynamic theme color opacity */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-foreground/30 animate-bounce hidden sm:block">
         <svg
-          className="w-8 h-8"
+          className="w-6 h-6"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
