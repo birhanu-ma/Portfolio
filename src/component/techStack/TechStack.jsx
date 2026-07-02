@@ -1,7 +1,9 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 
 const TechStack = () => {
   const scrollContainerRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
   const techData = [
     {
       category: "Frontend Architecture",
@@ -104,6 +106,27 @@ const TechStack = () => {
       ],
     },
   ];
+
+  // Track scroll position cleanly for full-width cards
+  useEffect(() => {
+    const handleScrollDetection = () => {
+      if (scrollContainerRef.current) {
+        const { scrollLeft, clientWidth } = scrollContainerRef.current;
+        const index = Math.round(scrollLeft / clientWidth);
+        setActiveIndex(index);
+      }
+    };
+
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.addEventListener("scroll", handleScrollDetection);
+    }
+    return () => {
+      if (container)
+        container.removeEventListener("scroll", handleScrollDetection);
+    };
+  }, []);
+
   const handleScroll = (direction) => {
     if (scrollContainerRef.current) {
       const { clientWidth, scrollLeft } = scrollContainerRef.current;
@@ -124,11 +147,10 @@ const TechStack = () => {
       id="tech"
       className="w-full bg-transparent py-24 px-6 md:px-12 lg:px-16 font-sans text-foreground transition-colors duration-300 relative"
     >
-      {/* Background radial soft light overlay */}
       <div className="absolute bottom-[5%] right-[5%] w-[450px] h-[450px] bg-foreground/[0.03] rounded-full -z-10 blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative">
-        {/* Header Block matching the minimal premium style */}
+        {/* Header Block */}
         <div className="flex flex-col items-center text-center mb-16">
           <span className="text-xs uppercase tracking-[0.2em] text-foreground/50 font-semibold block mb-3">
             Core Technical Matrix
@@ -139,68 +161,69 @@ const TechStack = () => {
           <div className="h-[2px] w-16 bg-foreground/40 rounded-full mb-6"></div>
           <p className="max-w-3xl mx-auto text-base md:text-lg text-foreground/60 leading-relaxed font-normal">
             A comprehensive overview of tools and frameworks applied across
-            resilient full-stack architectures, production MLOps pipelines,
-            high-accuracy risk models, and low-level embedded hardware.
+            resilient full-stack architectures.
           </p>
         </div>
 
         {/* Carousel View Wrapper */}
-        <div className="relative px-2">
-          {/* Navigation Controls */}
-          <div className="absolute top-[-56px] right-4 flex items-center gap-2">
-            <button
-              onClick={() => handleScroll("left")}
-              className="p-2.5 bg-card cursor-pointer border border-foreground/10 text-foreground hover:bg-foreground hover:text-background rounded-lg shadow-sm transition-all duration-300"
-              aria-label="Scroll Left"
+        <div className="relative md:px-14">
+          {/* Left Arrow (Desktop Only) */}
+          <button
+            onClick={() => handleScroll("left")}
+            className="hidden md:flex absolute left-0 top-[45%] -translate-y-1/2 z-20 p-3 bg-card border border-foreground/10 text-foreground hover:bg-foreground hover:text-background rounded-lg shadow-md transition-all duration-300 cursor-pointer"
+            aria-label="Scroll Left"
+          >
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              viewBox="0 0 24 24"
             >
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-            </button>
-            <button
-              onClick={() => handleScroll("right")}
-              className="p-2.5 bg-card border border-foreground/10 text-foreground hover:bg-foreground hover:text-background rounded-lg shadow-sm transition-all duration-300"
-              aria-label="Scroll Right"
-            >
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </button>
-          </div>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
 
-          {/* Sliding Card Grid Track */}
+          {/* Right Arrow (Desktop Only) */}
+          <button
+            onClick={() => handleScroll("right")}
+            className="hidden md:flex absolute right-0 top-[45%] -translate-y-1/2 z-20 p-3 bg-card border border-foreground/10 text-foreground hover:bg-foreground hover:text-background rounded-lg shadow-md transition-all duration-300 cursor-pointer"
+            aria-label="Scroll Right"
+          >
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+
+          {/* Sliding Card Grid Track 
+            - Standardized mobile cards to take up full layout width (w-full)
+            - Using `snap-start` so the active item locks flush with the layout bounds
+          */}
           <div
             ref={scrollContainerRef}
-            className="flex gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pt-4 pb-10 no-scrollbar scrollbar-none"
+            className="flex gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pt-4 pb-6 no-scrollbar scrollbar-none"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {techData.map((item, index) => (
               <div
                 key={index}
-                className="w-[calc(100%-8px)] sm:w-[calc(50%-10px)] md:w-[calc(33.333%-14px)] lg:w-[calc(25%-15px)] shrink-0 snap-start bg-card p-6 rounded-xl border border-foreground/10 hover:border-foreground/30 shadow-sm transition-all duration-300 flex flex-col justify-between group"
+                className="w-full sm:w-[calc(50%-10px)] md:w-[calc(33.333%-14px)] lg:w-[calc(25%-15px)] shrink-0 snap-start bg-card p-6 rounded-xl border border-foreground/10 hover:border-foreground/30 shadow-sm transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
-                  {/* Category Metadata Header */}
                   <div className="flex justify-between items-start mb-4">
                     <span className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 bg-foreground/5 px-2.5 py-1 rounded-md border border-foreground/5">
                       Stack item 0{index + 1}
@@ -210,14 +233,13 @@ const TechStack = () => {
                     </span>
                   </div>
 
-                  <h3 className="text-lg font-black text-foreground tracking-tight mb-0.5 group-hover:text-foreground transition-colors">
+                  <h3 className="text-lg font-black text-foreground tracking-tight mb-0.5">
                     {item.category}
                   </h3>
                   <p className="text-xs font-medium text-foreground/40 mb-4 tracking-wide">
                     {item.subtitle}
                   </p>
 
-                  {/* Informative Highlights */}
                   <div className="border-t border-foreground/5 pt-3 mb-6">
                     <p className="text-xs text-foreground/60 leading-relaxed font-normal">
                       {item.highlight}
@@ -225,7 +247,6 @@ const TechStack = () => {
                   </div>
                 </div>
 
-                {/* Micro Tag Cloud */}
                 <div className="flex flex-wrap gap-1.5 mt-auto">
                   {item.skills.map((skill, skillIndex) => (
                     <span
@@ -237,6 +258,20 @@ const TechStack = () => {
                   ))}
                 </div>
               </div>
+            ))}
+          </div>
+
+          {/* Pagination Dot Indicators */}
+          <div className="flex lg:hidden justify-center items-center gap-2 mt-4">
+            {techData.map((_, dotIndex) => (
+              <div
+                key={dotIndex}
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  activeIndex === dotIndex
+                    ? "w-6 bg-foreground"
+                    : "w-1.5 bg-foreground/20"
+                }`}
+              />
             ))}
           </div>
         </div>

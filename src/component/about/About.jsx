@@ -224,7 +224,7 @@ const About = () => {
                     <CompetencyItem
                       icon={<FaCode className="text-foreground/70" />}
                       title="Frontend Architecture"
-                      desc="React.js, Next.js, Vue 3, Nuxt 4, Tailwind CSS — Building responsive single-page frameworks with dynamic rendering and typed GraphQL modules."
+                      desc="React.js, Next.js, Vue 3, Nuxt 4, Tailwind CSS Building responsive single-page frameworks with dynamic rendering and typed GraphQL modules."
                     />
                   </ScrollAnimateItem>
 
@@ -232,7 +232,7 @@ const About = () => {
                     <CompetencyItem
                       icon={<FaServer className="text-foreground/70" />}
                       title="Backend Services"
-                      desc="Node.js, Golang (>v1.22), Express, FastAPI — Engineering high-performance HTTP microservices, strict isolated business logic, and OpenAPI structures."
+                      desc="Node.js, Golang (>v1.22), Express, FastAPI Engineering high-performance HTTP microservices, strict isolated business logic, and OpenAPI structures."
                     />
                   </ScrollAnimateItem>
 
@@ -240,7 +240,7 @@ const About = () => {
                     <CompetencyItem
                       icon={<FaDatabase className="text-foreground/70" />}
                       title="Database Systems"
-                      desc="PostgreSQL, MongoDB, MySQL, Hasura GraphQL — Designing relational data models, structured schemas, and optimized query indices."
+                      desc="PostgreSQL, MongoDB, MySQL, Hasura GraphQL Designing relational data models, structured schemas, and optimized query indices."
                     />
                   </ScrollAnimateItem>
 
@@ -248,7 +248,7 @@ const About = () => {
                     <CompetencyItem
                       icon={<FaBrain className="text-foreground/70" />}
                       title="ML & Data Science"
-                      desc="Scikit-learn, XGBoost, Pandas, SHAP — Formulating tabular analytics, feature interpretations, and financial risk models."
+                      desc="Scikit-learn, XGBoost, Pandas, SHAP Formulating tabular analytics, feature interpretations, and financial risk models."
                     />
                   </ScrollAnimateItem>
 
@@ -256,7 +256,7 @@ const About = () => {
                     <CompetencyItem
                       icon={<FaMicrochip className="text-foreground/70" />}
                       title="Production MLOps & IoT"
-                      desc="Docker Compose, MLflow, DVC, C++, Arduino — Managing data version control, lifecycle pipelines, container orchestration, and low-level system integrations."
+                      desc="Docker Compose, MLflow, DVC, C++, Arduino Managing data version control, lifecycle pipelines, container orchestration, and low-level system integrations."
                     />
                   </ScrollAnimateItem>
                 </div>

@@ -68,8 +68,8 @@ const Experience = () => {
       id="experience"
       className="w-full bg-background font-sans text-foreground transition-colors duration-300 relative"
     >
-      {/* Structural full-screen Title Entry Header */}
-      <div className="w-full h-screen px-6 md:px-12 lg:px-16 flex flex-col justify-center items-center text-center border-b border-foreground/10">
+      {/* Structural Title Header - Using min-h-screen to prevent mobile clipping */}
+      <div className="w-full min-h-screen py-20 px-6 md:px-12 lg:px-16 flex flex-col justify-center items-center text-center border-b border-foreground/10">
         <div className="max-w-7xl mx-auto w-full flex flex-col items-center">
           <span className="text-xs uppercase tracking-[0.2em] text-foreground/50 font-semibold block mb-3">
             Professional Timeline
