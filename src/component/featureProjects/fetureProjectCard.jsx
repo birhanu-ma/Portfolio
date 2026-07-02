@@ -13,23 +13,30 @@ const FeaturedProjectCard = ({ projects = [], scrollRef }) => {
   return (
     <div
       ref={scrollRef}
-      className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 no-scrollbar scrollbar-none w-full"
+      className="flex gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pt-4 pb-6 no-scrollbar scrollbar-none w-full"
       style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
     >
       {projects.map((project, index) => {
-        const { title, category, description, tech, demoLink, githubLink, image } = project;
+        const {
+          title,
+          category,
+          description,
+          tech,
+          demoLink,
+          githubLink,
+          image,
+        } = project;
         const hasImage = !!image;
 
         return (
           <div
             key={index}
-            className={`w-full shrink-0 snap-start bg-card rounded-xl border border-foreground/10 shadow-sm hover:border-foreground/30 transition-all duration-300 overflow-hidden group flex flex-col ${
-              hasImage ? "" : "lg:flex-row lg:items-stretch"
-            }`}
+            className="w-full shrink-0 snap-start bg-card rounded-xl border border-foreground/10 shadow-sm hover:border-foreground/30 transition-all duration-300 overflow-hidden group flex flex-col"
           >
-            {/* Split row setup: Content Left side / Image Right side */}
-            <div className={`flex flex-col ${hasImage ? "md:flex-row md:items-stretch" : "flex-1"}`}>
-              
+            {/* Main Info split setup */}
+            <div
+              className={`flex flex-col ${hasImage ? "md:flex-row md:items-stretch" : "flex-1"}`}
+            >
               {/* Main Content Info Panel */}
               <div className="flex flex-col flex-1 p-6 md:p-8 justify-between order-1">
                 <div>
@@ -70,7 +77,7 @@ const FeaturedProjectCard = ({ projects = [], scrollRef }) => {
                 </div>
               </div>
 
-              {/* Centered Object-Contain Image Box on Right side */}
+              {/* Centered Image Box Panel on Right side */}
               {hasImage && (
                 <div className="w-full md:w-[340px] xl:w-[420px] shrink-0 relative bg-foreground/[0.015] border-t md:border-t-0 md:border-l border-foreground/10 flex items-center justify-center p-4 min-h-[240px] order-2">
                   <img
@@ -84,11 +91,7 @@ const FeaturedProjectCard = ({ projects = [], scrollRef }) => {
             </div>
 
             {/* Bottom Tech Stack Matrix cloud row element */}
-            <div
-              className={`p-6 md:p-8 bg-foreground/[0.015] border-t border-foreground/10 flex flex-col justify-start ${
-                hasImage ? "w-full" : "lg:border-t-0 lg:border-l md:w-80 shrink-0"
-              }`}
-            >
+            <div className="p-6 md:p-8 bg-foreground/[0.015] border-t border-foreground/10 flex flex-col justify-start w-full">
               <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-foreground/40 mb-3 border-b border-foreground/5 pb-2">
                 Technical Stack
               </h4>
